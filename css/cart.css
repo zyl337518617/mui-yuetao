@@ -1,0 +1,55 @@
+header{background: #000000!important;color: #fff;box-shadow: none!important;}
+header h1{
+	color:#fff!important;
+}
+ul,li{
+	list-style: none;
+}
+.list{
+	font-size: 16px;
+}
+.listbody .sub,.listbody .inpp,.listbody .add{
+	padding: 0!important;
+	margin: 0;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	text-align: center;
+	margin-left: 10px;
+}
+
+.num{
+	display: inline-block;
+	float:right;
+	color: #FF69B4;
+	height: 25px;
+	font-size: 12px;
+	width: 25px;
+	border-radius: 50%;
+	border: 1px solid #F15A0C;
+	text-align: center;
+	line-height: 25px;
+}
+.listbody .inpp{
+	font-size: 12px;
+	
+}
+#bottom{
+	height: 44px;
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	line-height:44px;
+	text-align: center;
+}
+.price{
+	font-size: 14px;
+	float:right;
+	
+}
+.del{
+	float: right;
+	padding: 0;
+	margin: 0;
+}

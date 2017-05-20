@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.title {
+				/*margin: 20px 15px 10px;*/
+				color: #6d6d72;
+				font-size: 15px;
+			}
+			
+			.mui-grid-view.mui-grid-9 {
+				background-color: #fff;
+			}
+			
+			.mui-grid-view.mui-grid-9 .mui-media .mui-icon {
+				font-size: 1.4em;
+				color: #007AFF;
+			}
+			
+			.mui-grid-view.mui-grid-9 .mui-media:nth-child(2) .mui-icon {
+				color: #F0AD4E;
+			}
+			
+			.mui-grid-view.mui-grid-9 .mui-media:nth-child(3) .mui-icon {
+				color: #8A6DE9;
+			}
+			
+			.mui-grid-view.mui-grid-9 .mui-media:nth-child(5) .mui-icon {
+				color: #4CD964;
+			}
+			
+			.mui-grid-view.mui-grid-9 .mui-media:nth-child(4) .mui-icon {
+				color: #FF5053;
+			}
+			
+			.mui-grid-view.mui-grid-9 .mui-media:nth-child(6) .mui-icon {
+				color: hotpink;
+			}
+			
+			.mui-grid-view.mui-grid-9 .mui-media {
+				border-right: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+				box-shadow: 0px 1px 3px #ccc;
+			}
+			
+			ul,
+			li {
+				list-style: none;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
+				padding: 0;
+			}
+			.mui-col-xs-6 li{
+				background: #fff;
+				text-align: center;
+				padding-top: 25px;
+				
+			}
+			.mui-col-xs-6 li .price{
+				color: #F0AD4E;
+				display: inline-block;
+				margin-right: 10px;
+			}
+			.mui-col-xs-6 li .oldprice{
+				text-decoration: line-through;
+			}
+			#list img{
+				width: 50px ;
+			}
+			#lie li {
+				list-style: none;
+				background: #fafafa;
+			}
+			
+			#lie {
+				padding-bottom: 10px;
+				margin-top: 10px;
+				/*margin-left: -7px;*/
+				hegiht:100px;width:100%;
+				overflow: hidden;
+			}
+			
+			#lie img {
+				width: 63px;
+				height: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div class="title">
+				<div id="slider" class="mui-slider mmm" style="width:100% ;height: 100%;">
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="images/timg (4).jpg">
+							</a>
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/timg.jpg">
+							</a>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/timg (1).jpg">
+							</a>
+						</div>
+						<!-- 第三张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/timg (2).jpg">
+							</a>
+						</div>
+						<!-- 第四张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/timg (3).jpg">
+							</a>
+						</div>
+						<!--第五张-->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/timg (4).jpg">
+							</a>
+						</div>
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="images/timg.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+				
+				<div class="mui-content" id="lie">
+					<div class="mui-row" style="text-align: center;">
+						<div class="mui-col-xs-3" >
+							<li class="mui-table-view-cell">
+								
+								<a class=""  id="cuxiao">
+									<img src="images/file_58ef1b07817ed.jpg" /><br />
+									<span>最新...</span>
+								</a>
+							</li>
+						</div>
+						<div class="mui-col-xs-3" >
+							<li class="mui-table-view-cell">
+								
+								<a class="" id="hot">
+									<img src="images/file_58ef1b078974e.jpg" /><br />
+									<span>热门...</span>
+								</a>
+							</li>
+						</div>
+						<div class="mui-col-xs-3" >
+							<li class="mui-table-view-cell">
+								
+								<a class="" id="ren">
+									<img src="images/file_58ef1b07907f3.jpg" /><br />
+									<span>人气...</span>
+								</a>
+							</li>
+						</div>
+						<div class="mui-col-xs-3" >
+							<li class="mui-table-view-cell">
+								
+								<a class="" id="quan">
+									<img src="images/file_58ef1b0876f3a.jpg" /><br />
+									<span>优惠券</span>
+								</a>
+							</li>
+						</div>
+					</div>
+				</div>
+				<div id="slider" class="mui-slider lll">
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<div class="mui-row">
+								<div class="mui-col-sm-6 mui-col-xs-4">
+									<li class="mui-table-view-cell">
+										<a >
+											<img src="images/131267813109409052.gif"/>
+										</a>
+									</li>
+								</div>
+								<div class="mui-col-sm-6 mui-col-xs-4">
+									<li class="mui-table-view-cell">
+										<a >
+											<img src="images/131338611393997948.jpg"/>
+										</a>
+									</li>
+								</div>
+								<div class="mui-col-sm-6 mui-col-xs-4">
+									<li class="mui-table-view-cell">
+										<a >
+											<img src="images/131338611629153535.jpg"/>
+										</a>
+									</li>
+								</div>
+							</div>	
+
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<div class="mui-row">
+								<div class="mui-col-sm-6 mui-col-xs-4">
+									<li class="mui-table-view-cell">
+										<a >
+											<img src="images/131267812376284667.gif"/>
+										</a>
+									</li>
+								</div>
+								<div class="mui-col-sm-6 mui-col-xs-4">
+									<li class="mui-table-view-cell">
+										<a >
+											<img src="images/131267812627221552.gif"/>
+										</a>
+									</li>
+								</div>
+								<div class="mui-col-sm-6 mui-col-xs-4">
+									<li class="mui-table-view-cell">
+										<a >
+											<img src="images/131267812843784033.gif"/>
+										</a>
+									</li>
+								</div>
+							</div>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<div class="mui-row">
+								<div class="mui-col-sm-6 mui-col-xs-4">
+									<li class="mui-table-view-cell">
+										<a >
+											<img src="images/131267813109409052.gif"/>
+										</a>
+									</li>
+								</div>
+								<div class="mui-col-sm-6 mui-col-xs-4">
+									<li class="mui-table-view-cell">
+										<a >
+											<img src="images/131338611393997948.jpg"/>
+										</a>
+									</li>
+								</div>
+								<div class="mui-col-sm-6 mui-col-xs-4">
+									<li class="mui-table-view-cell">
+										<a >
+											<img src="images/131338611629153535.jpg"/>
+										</a>
+									</li>
+								</div>
+							</div>	
+						</div>
+
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<div class="mui-row">
+								<div class="mui-col-sm-6 mui-col-xs-4">
+									<li class="mui-table-view-cell">
+										<a >
+											<img src="images/131267812376284667.gif"/>
+										</a>
+									</li>
+								</div>
+								<div class="mui-col-sm-6 mui-col-xs-4">
+									<li class="mui-table-view-cell">
+										<a >
+											<img src="images/131267812627221552.gif"/>
+										</a>
+									</li>
+								</div>
+								<div class="mui-col-sm-6 mui-col-xs-4">
+									<li class="mui-table-view-cell">
+										<a >
+											<img src="images/131267812843784033.gif"/>
+										</a>
+									</li>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div style="height: 30px;line-height: 30px;border-bottom: 1px solid #404040;background: #fff;text-indent: 2em;">
+					<span>店家推荐：</span>
+				</div>
+				<div class="mui-content">
+			    <div class="mui-row" id="di">
+			       
+			    </div>
+			</div>
+
+		</div>
+	</body>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js"></script>
+	
+	<script src="js/touch.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		mui.init({
+			swipeBack: true ,//启用右滑关闭功能
+
+		});
+		var gallery = mui('.mmm');
+		gallery.slider({
+			interval: 5000 //自动轮播周期，若为0则不自动播放，默认为0；
+		});
+		var gallery = mui('.lll');
+		gallery.slider({
+			interval: 10000 //自动轮播周期，若为0则不自动播放，默认为0；
+		});
+		$.getJSON("json/good.json",function(data){
+			var li=""
+			var a=0;
+				for (i in data) {
+					a++
+					if(a<5){
+						li+='<div class="mui-col-sm-6 mui-col-xs-6  load" id="'+data[i]["dataid"]+'">'+
+			            '<li class="mui-table-view-cell"><a  >'+
+			            		 '<div><img src="'+data[i]["img"]+'" alt="" /></div>'+
+			            		 '<p>'+data[i]["title"]+
+			            		 '</p><p><span class="price">￥'+data[i]["price"]+'</span><span class="oldprice">￥'+data[i]["oldprice"]+'</span></p></a></li></div>'
+						
+					}  
+				}
+				$("#di").html(li)
+				aa($(".load"))
+		})
+		
+		document.getElementById("cuxiao").addEventListener("tap", function() {
+			mui.openWindow({
+				id: 'coupon',
+				url: 'cuxiao.html'
+			});
+		});
+		document.getElementById("quan").addEventListener("tap", function() {
+			mui.openWindow({
+				id: 'quan',
+				url: 'quan.html'
+			});
+		});
+		document.getElementById("ren").addEventListener("tap", function() {
+			mui.openWindow({
+				id: 'ren',
+				url: 'ren.html'
+			});
+		});
+		document.getElementById("hot").addEventListener("tap", function() {
+			mui.openWindow({
+				id: 'hot',
+				url: 'hot.html'
+			});
+		});
+		function aa(obj1){
+			obj1.on("tap", function() {
+			mui.openWindow({
+				id: "xiangqing",
+				url: 'xiangqing.html?good='+$(this).attr("id")
+			});
+			
+			});
+		}
+		
+		
+	</script>
+</html>

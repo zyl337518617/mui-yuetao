@@ -1,0 +1,13 @@
+.mui-content{
+	background: #FF6767!important;
+	margin: 0 auto;
+	text-align: center;
+	height:580px;
+}
+.mui-content img{
+	margin: 20px auto;
+}
+header{background: #000000!important;color: #fff;box-shadow: none!important;}
+header h1{
+	color:#fff!important;
+}

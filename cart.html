@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/cart.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #fff;"></a>
+			<h1 class="mui-title">购物车</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view listbody">
+
+			</ul>
+
+		</div>
+		<div id="bottom">
+			总价：<span class="zong"></span>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/touch.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init({
+			gestureConfig: {
+				tap: false //默认为true
+			}
+		})
+
+		function _tap() {
+			
+			$("input").on("tap", function() {
+				aa()
+				if($(this).attr("class") == "sub") {
+					if($(this).next().val() > 1) {
+						$(this).next().val(Number($(this).next().val()) - 1)
+						var data = {
+							goodid: $(this).parents(".list").attr("id"),
+							num: $(this).next().val()
+						}
+						localStorage.setItem("good" + $(this).parents(".list").attr("id"), JSON.stringify(data))
+
+						$(this).parents(".list").find($(".num")).html("×" + $(this).next().val())
+
+					}
+				} else if($(this).attr("class") == "add") {
+					$(this).prev().val(Number($(this).prev().val()) + 1)
+					var data = {
+						goodid: $(this).parents(".list").attr("id"),
+						num: $(this).prev().val()
+					}
+					localStorage.setItem("good" + $(this).parents(".list").attr("id"), JSON.stringify(data))
+					$(this).parents(".list").find($(".num")).html("×" + $(this).prev().val())
+				}
+
+			})
+		}
+
+		function aa() {
+			$.getJSON("json/good.json", function(data) {
+					
+					var pri = 0
+					$(".listbody").html("")
+					for(var i = 0; i < localStorage.length; i++) {
+
+						$(".listbody").append('<li class="mui-table-view-cell mui-media list" id="' + JSON.parse(localStorage.getItem(localStorage.key(i))).goodid + '"><a href="javascript:;"><img class="mui-media-object mui-pull-left" src="' + data[JSON.parse(localStorage.getItem(localStorage.key(i))).goodid].img + '"/><div class="mui-media-body"><span class="tatle">' + data[JSON.parse(localStorage.getItem(localStorage.key(i))).goodid].title + '</span><span class="mui-icon mui-icon-trash del"></span><span class="price">￥' + data[JSON.parse(localStorage.getItem(localStorage.key(i))).goodid].price + '</span><p class="mui-ellipsis"><input type="button"  class="sub" value="-"  style=""/><input type="text" name="" class="inpp"  value="' + JSON.parse(localStorage.getItem(localStorage.key(i))).num + '"/><input type="button" class="add" value="+" /><span class="num">×' + JSON.parse(localStorage.getItem(localStorage.key(i))).num + '</span></p> </div></a></li>')
+			
+						pri += Number($(".inpp").eq(i).val() * data[JSON.parse(localStorage.getItem(localStorage.key(i))).goodid].price)
+			
+						$(".zong").html(pri.toFixed(2))
+
+					}
+
+					_tap()
+					delet()
+				}
+
+			)
+		}
+
+		aa()
+
+		function delet(){
+		$(".del ").on("click",function(){
+			if(confirm("您确定要删除吗")){
+				
+				localStorage.removeItem("good"+$(this).parents(".list").attr("id"))
+				$(this).parents(".list").css("display","none")
+				
+			}else{
+				
+			}
+			
+		})
+	}
+	</script>
+
+</html>

@@ -1,0 +1,16 @@
+.lunbo img{
+	width: 400px;
+	height: 180px;
+}
+header{background: #000000!important;color: #fff;box-shadow: none!important;}
+header h1{
+	color:#fff!important;
+}
+.price{
+	color: #FF5053;
+	font-size: 16px;
+	margin-right: 10px;
+}
+.oldprice{
+	text-decoration: line-through;
+}

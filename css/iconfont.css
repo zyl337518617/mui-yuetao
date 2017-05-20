@@ -1,0 +1,25 @@
+
+ @font-face {font-family: "iconfont";
+        src:url('../fonts/iconfont.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    }
+
+    .iconfont {
+        font-family:"iconfont" !important;
+        font-size:16px;
+        font-style:normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+    }
+
+.icon-shoppingcart:before { content: "\e689"; }
+
+.icon-cuxiao:before { content: "\e678"; }
+
+.icon-dingdan:before { content: "\e626"; }
+
+.icon-liulanjilu:before { content: "\e622"; }
+
+.icon-tiaoxingma:before { content: "\e6b8"; }
+
+.icon-search:before { content: "\e600"; }
+

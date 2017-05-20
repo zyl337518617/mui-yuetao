@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			body{background: #fff;}
+			header{background: #000000!important;color: #fff;}
+			.mui-segmented-control .mui-control-item.mui-active {
+			   border-bottom: 1px solid #222222;
+			   color: #000000;
+			    background: none;
+			}
+			.mui-segmented-control {
+				border: none;
+				height: 20px!important;
+				font-size: 14px;
+			}
+			.mui-segmented-control .mui-control-item {
+				border: none;
+				color: #6D6D72;
+			}
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
+			    height: 35px;
+			
+			}
+			.jia{
+				line-height: 30px;
+			}
+			.oldprice{
+				text-decoration: line-through;
+			}
+			.price{
+				color: #F0AD4E;
+				display: inline-block;
+				margin-right: 10px;
+				font-weight: bold;
+				/*font-size: 20px;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #fff;"></a>
+		   <span class="mui-icon mui-icon-more mui-pull-right"></span>
+		</header>
+		<div class="mui-content" style="border: none;">
+		   <div class="mui-segmented-control">
+		       <a class="mui-control-item mui-active" href="#item1">少儿</a>
+		       <a class="mui-control-item" href="#item2">小说</a>
+		       <a class="mui-control-item" href="#item3">励志</a>
+		       <a class="mui-control-item" href="#item4">科学</a>
+		   </div>
+		  
+		</div>
+		<div class="mui-control-content mui-active" id="item1" >
+		 	<ul class="mui-table-view mui-grid-view "  id="ite1" >
+
+		    </ul>
+		</div>
+		<div class="mui-control-content"  id="item2">
+ 			<ul class="mui-table-view mui-grid-view " id="ite2">
+
+		   	</ul>
+		</div>
+		<div class="mui-control-content"  id="item3">
+ 			<ul class="mui-table-view mui-grid-view " id="ite3">
+
+		   	</ul>
+		</div>
+		<div class="mui-control-content"  id="item4">
+ 			<ul class="mui-table-view mui-grid-view " id="ite4">
+
+		   	</ul>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+		<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/touch.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init()
+	
+		$.getJSON("json/good.json",function(data){
+            	var con="";
+            	var con1="";
+            	var con2="";
+            	var con3="";
+            	for(var i=1;i<7;i++){
+            		con+='<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6  aa1" id="'+data[i]["dataid"]+'"><a href="javascript:;">'+
+							'<img class="mui-media-object mui-pull-left" src="'+data[i]["img"]+'">'+
+							'<div class="mui-media-body">'+data[i]["title"]+'<p class="jia"><span class="price">￥'+data[i]["price"]+'</span><span class="oldprice">￥'+data[i]["oldprice"]+'</span></p></div></a></li>'
+            	
+            	}
+            	$("#ite1").html(con);
+            
+            	for(var j=7;j<12;j++){
+            		con1+='<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6 aa1" id="'+data[j]["dataid"]+'"><a href="javascript:;">'+
+							'<img class="mui-media-object mui-pull-left" src="'+data[j]["img"]+'">'+
+							'<div class="mui-media-body">'+data[j]["title"]+'<p class="jia"><span class="price">￥'+data[j]["price"]+'</span><span class="oldprice">￥'+data[j]["oldprice"]+'</span></p></div></a></li>'
+            	
+            	}
+            	$("#ite2").html(con1);
+            	
+            	for(var j=12;j<17;j++){
+            		con2+='<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6 aa1" id="'+data[j]["dataid"]+'"><a href="javascript:;">'+
+							'<img class="mui-media-object mui-pull-left" src="'+data[j]["img"]+'">'+
+							'<div class="mui-media-body">'+data[j]["title"]+'<p class="jia"><span class="price">￥'+data[j]["price"]+'</span><span class="oldprice">￥'+data[j]["oldprice"]+'</span></p></div></a></li>'
+            	
+            	}
+            	$("#ite3").html(con2);
+            	
+            	for(var j=17;j<22;j++){
+            		con3+='<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6 aa1" id="'+data[j]["dataid"]+'"><a href="javascript:;">'+
+							'<img class="mui-media-object mui-pull-left" src="'+data[j]["img"]+'">'+
+							'<div class="mui-media-body">'+data[j]["title"]+'<p class="jia"><span class="price">￥'+data[j]["price"]+'</span><span class="oldprice">￥'+data[j]["oldprice"]+'</span></p></div></a></li>'
+            	
+            	}
+            	$("#ite4").html(con3);
+        		
+        		
+        		aa($(".aa1"))
+            }
+        	)
+		function aa(obj1){
+			obj1.on("tap", function() {
+			mui.openWindow({
+				id: "xiangqing",
+				url: 'xiangqing.html?good='+$(this).attr("id")
+			});
+//				console.log(1)
+			
+			});
+		}
+	</script>
+</html>

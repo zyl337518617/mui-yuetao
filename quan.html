@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/quan.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" >
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #fff;"></a>
+		    <h1 class="mui-title">优惠券</h1>
+		</header>
+		<div class="mui-content">
+		
+				
+				
+					<img src="images/111.png"/>
+				
+			
+			<button id="but">点击领取</button>
+		    
+		</div>
+
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/touch.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init(
+			{	
+				 gestureConfig:{
+				   tap: false //默认为true
+				   }
+			}
+		)
+		$("#but").on("tap",function(){
+			confirm("确定要领取吗？")
+		})
+	</script>
+</html>

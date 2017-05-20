@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/hot.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #fff;"></a>
+		    <h1 class="mui-title">热门排行</h1>
+		</header>
+		<div class="mui-content">
+		     <div id="slider" class="mui-slider" >
+		      <div class="mui-slider-group mui-slider-loop lunbo">
+		        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		        <div class="mui-slider-item mui-slider-item-duplicate">
+		          <a href="#">
+		            <img src="images/lun5.jpg">
+		          </a>
+		        </div>
+		        <!-- 第一张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="images/lun1.jpg">
+		          </a>
+		        </div>
+		        <!-- 第二张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="images/lun2.jpg">
+		          </a>
+		        </div>
+		        <!-- 第三张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="images/lun3.jpg">
+		          </a>
+		        </div>
+		        <!-- 第四张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="images/lun4.jpg">
+		          </a>
+		        </div>
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="images/lun5.jpg">
+		          </a>
+		        </div>
+		        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		        <div class="mui-slider-item mui-slider-item-duplicate">
+		          <a href="#">
+		            <img src="images/lun1.jpg">
+		          </a>
+		        </div>
+		      </div>
+		      <div class="mui-slider-indicator">
+		        <div class="mui-indicator mui-active"></div>
+		        <div class="mui-indicator"></div>
+		        <div class="mui-indicator"></div>
+		        <div class="mui-indicator"></div>
+		        <div class="mui-indicator"></div>
+		      </div>
+		    </div>
+		    
+		</div>
+		<ul class="mui-table-view" id="ilist">
+			 
+			</ul>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/touch.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init()
+		
+		
+		var s=2;
+		var e=10;
+	function jia(s,e){
+				$.getJSON("json/good.json",function(data){
+           	console.log(data[0])
+            	var con=""
+            	for(var i=s;i<e;i++){
+            		con+='<li class="mui-table-view-cell mui-media lis" id="'+data[i]["dataid"]+'">'+
+			        '<a href="javascript:;"><img class="mui-media-object mui-pull-left" src="'+data[i]["img"]+'">'+
+			        '<div class="mui-media-body">'+data[i]["drice"]+'<p class="mui-ellipsis">'+data[i]["jieshao"]+
+			        '</p>'+'<p class="mui-ellipsis"><span class="price">￥'+data[i]["price"]+'</span><span class="oldprice">￥'+data[i]["oldprice"]+'</span></p></p>'+
+			            '</div> </a></li>'
+			       
+			
+            	}
+            	
+            	$("#ilist").append(con);
+        		aa($(".lis"))
+            }
+        	)
+		}
+		function aa(obj1){
+			obj1.on("tap", function() {
+			mui.openWindow({
+				id: "xiangqing",
+				url: 'xiangqing.html?good='+$(this).attr("id")
+			});
+				console.log(1)
+			
+			});
+		}
+	
+	jia(s,e)
+	</script>
+</html>

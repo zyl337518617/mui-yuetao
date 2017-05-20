@@ -1,0 +1,334 @@
+{
+	"main.html": {
+		"refer": [
+			"setting.html"
+		],
+		"resources": []
+	},
+	"login.html": {
+		"resources": [
+			"js/app.js",
+			"js/mui.min.js",
+			"images/sinaweibo.png",
+			"css/mui.min.css",
+			"css/style.css",
+			"images/weixin.png",
+			"images/qq.png",
+			"js/mui.enterfocus.js",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"main.html",
+			"tab-webview-main.html",
+			"tab-webview-subpage-contact.html"
+		]
+	},
+	"setting.html": {
+		"resources": [
+			"libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+			"fonts/mui.ttf",
+			"libs/easymob-webim-sdk/json2.js",
+			"libs/easymob-webim-sdk/jquery-1.11.1.js",
+			"js/mui.locker.js",
+			"js/feedback.js",
+			"css/feedback-page.css",
+			"js/feedback-page.js",
+			"libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+			"js/mui.view.js"
+		],
+		"refer": []
+	},
+	"tab-webview-main.html": {
+		"resources": [
+			"tab-webview-subpage-about.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/iconfont.css",
+			"js/touch.min.js",
+			"js/zepto.js"
+		],
+		"refer": [
+			"tab-webview-subpage-about.html",
+			"tab-webview-subpage-setting.html",
+			"tab-webview-subpage-chat.html",
+			"tab-webview-subpage-contact.html"
+		]
+	},
+	"tab-webview-subpage-about.html": {
+		"resources": [
+			"images/131340348982590030.jpg",
+			"images/131341038441223491.jpg",
+			"images/131338609184466923.jpg",
+			"images/131341065444505431.jpg",
+			"images/131338660864309939.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"images/131296983484499379.jpg",
+			"images/131326598438074271.jpg",
+			"images/131267815751910038.jpg",
+			"images/131267813680034001.jpg",
+			"images/131267814045191216.jpg",
+			"images/131292651027796921.jpg",
+			"fonts/iconfont.ttf",
+			"css/iconfont.css",
+			"images/131338611393997948.jpg",
+			"images/131267812376284667.gif",
+			"images/131338663338997243.png",
+			"images/131267812627221552.gif",
+			"images/131267813109409052.gif",
+			"images/131267812843784033.gif",
+			"js/zepto.js",
+			"images/imgs/750805699-150.jpg",
+			"images/131338611629153535.jpg",
+			"js/touch.min.js",
+			"json/good.json",
+			"images/imgs/750865062-150.jpg",
+			"images/imgs/750864255-fm-b-150.jpg",
+			"images/imgs/750865188-150.jpg",
+			"tab-webview-subpage-contact.html",
+			"tab-webview-subpage-chat.html",
+			"images/imgs/753076513-150.jpg",
+			"images/imgs/751046039-150.jpg",
+			"images/imgs/750867077-150.jpg",
+			"images/imgs/750866125-150.jpg",
+			"images/imgs/750867206-150.jpg",
+			"images/file_58ef1b078974e.jpg",
+			"images/file_58ef1b07817ed.jpg",
+			"images/file_58ef1b0876f3a.jpg",
+			"images/file_58f099c39ad0e.jpg",
+			"images/file_58ef1b07907f3.jpg",
+			"images/u\u003d1980645680,3940798872\u0026fm\u003d23\u0026gp\u003d0.jpg",
+			"images/u\u003d816328312,1078812189\u0026fm\u003d23\u0026gp\u003d0.jpg",
+			"images/timg.jpg",
+			"images/u\u003d3833972753,1611676971\u0026fm\u003d23\u0026gp\u003d0.jpg",
+			"images/timg (4).jpg",
+			"images/timg (1).jpg",
+			"images/timg (2).jpg",
+			"images/timg (3).jpg",
+			"images/imgs/754147910-150.jpg",
+			"images/imgs/753425630-150.jpg"
+		],
+		"refer": [
+			"tab-webview-subpage-contact.html",
+			"tab-webview-subpage-chat.html",
+			"cuxiao.html",
+			"xiangqing.html",
+			"hot.html",
+			"quan.html",
+			"ren.html"
+		]
+	},
+	"tab-webview-subpage-setting.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"tab-webview-subpage-chat.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/imgs/750865062-150.jpg",
+			"json/good.json",
+			"images/imgs/750866125-150.jpg",
+			"js/touch.min.js",
+			"js/zepto.js",
+			"images/imgs/753425630-150.jpg",
+			"images/imgs/753996736-150.jpg",
+			"images/imgs/753327906-150.jpg",
+			"images/imgs/753076513-150.jpg",
+			"images/imgs/750867206-150.jpg",
+			"images/imgs/751046039-150.jpg",
+			"images/imgs/753394360-fm-b-150.jpg",
+			"images/imgs/753547689-150.jpg",
+			"images/imgs/750866827-150.jpg",
+			"images/imgs/750867077-150.jpg",
+			"images/imgs/754147910-150.jpg",
+			"images/imgs/753914906-150.jpg",
+			"images/imgs/753848520-150.jpg",
+			"images/imgs/712120355-fm-b-150.jpg"
+		],
+		"refer": [
+			"xiangqing.html"
+		]
+	},
+	"cuxiao.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/imgs/750867077-150.jpg",
+			"images/imgs/750865188-150.jpg",
+			"images/imgs/753425630-150.jpg",
+			"json/good.json",
+			"images/imgs/751046039-150.jpg",
+			"images/imgs/754147910-150.jpg",
+			"js/touch.min.js",
+			"js/zepto.js",
+			"images/imgs/753996736-150.jpg",
+			"images/imgs/753547689-150.jpg",
+			"images/imgs/750864255-fm-b-150.jpg",
+			"images/imgs/753076513-150.jpg",
+			"images/imgs/750865062-150.jpg",
+			"images/imgs/753327906-150.jpg",
+			"images/imgs/750866125-150.jpg",
+			"images/imgs/750867206-150.jpg",
+			"images/imgs/753394360-fm-b-150.jpg",
+			"images/imgs/750866827-150.jpg",
+			"images/imgs/753914906-150.jpg",
+			"images/imgs/753848520-150.jpg",
+			"images/imgs/2766993-fm-b-150.jpg",
+			"images/imgs/712120355-fm-b-150.jpg",
+			"images/imgs/754427087-fm-b-150.jpg",
+			"images/imgs/722907621-150.jpg"
+		],
+		"refer": [
+			"xiangqing.html"
+		]
+	},
+	"xiangqing.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"images/imgs/750865062-350.jpg",
+			"css/mui.min.css",
+			"json/good.json",
+			"js/touch.min.js",
+			"js/zepto.js",
+			"images/imgs/750865188-350.jpg",
+			"images/imgs/750864255-fm-b-350.jpg",
+			"images/imgs/750866125-350.jpg",
+			"images/imgs/750866827-350.jpg",
+			"images/imgs/751046039-350.jpg",
+			"images/imgs/750867077-350.jpg",
+			"images/imgs/750867206-350.jpg",
+			"images/imgs/753076513-350.jpg",
+			"images/3741481-fm-b-350.jpg",
+			"images/753394360-fm-b-350.jpg",
+			"images/753327906-350.jpg",
+			"images/131267812627221552.gif",
+			"images/imgs/753425630-350.jpg",
+			"images/imgs/753848520-350.jpg",
+			"images/imgs/753914906-350.jpg",
+			"images/imgs/2766993-fm-b-150.jpg",
+			"images/753996736-350.jpg"
+		],
+		"refer": []
+	},
+	"tab-webview-subpage-contact.html": {
+		"resources": [
+			"images/131341065444505431.jpg",
+			"images/131341038441223491.jpg",
+			"css/mui.min.css",
+			"images/18I58PICDYM_1024.jpg",
+			"images/u\u003d2427552546,3635965300\u0026fm\u003d23\u0026gp\u003d0.jpg",
+			"images/21j58PICVCK_1024.jpg",
+			"images/74X58PICA9e_1024.jpg",
+			"images/u\u003d1588147162,276753163\u0026fm\u003d23\u0026gp\u003d0.jpg",
+			"images/83j58PICVkK.jpg",
+			"fonts/mui.ttf",
+			"js/touch.min.js",
+			"js/zepto.js",
+			"login.html",
+			"js/mui.min.js"
+		],
+		"refer": [
+			"login.html",
+			"cart.html"
+		]
+	},
+	"hot.html": {
+		"resources": [
+			"images/lun1.jpg",
+			"images/lun3.jpg",
+			"images/lun2.jpg",
+			"images/lun5.jpg",
+			"images/lun4.jpg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/hot.css",
+			"json/good.json",
+			"images/imgs/753996736-150.jpg",
+			"js/zepto.js",
+			"images/imgs/750867077-150.jpg",
+			"images/imgs/753914906-150.jpg",
+			"images/imgs/753848520-150.jpg",
+			"js/touch.min.js",
+			"images/imgs/753547689-150.jpg",
+			"images/imgs/753327906-150.jpg",
+			"images/imgs/750864255-fm-b-150.jpg",
+			"images/imgs/750865188-150.jpg",
+			"images/imgs/750866827-150.jpg",
+			"images/imgs/754427087-fm-b-150.jpg"
+		],
+		"refer": [
+			"xiangqing.html"
+		]
+	},
+	"quan.html": {
+		"resources": [
+			"images/111.png",
+			"css/quan.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/touch.min.js",
+			"js/zepto.js"
+		],
+		"refer": []
+	},
+	"cart.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/touch.min.js",
+			"js/zepto.js",
+			"css/cart.css",
+			"images/imgs/722907621-150.jpg",
+			"json/good.json",
+			"images/imgs/753425630-150.jpg",
+			"images/imgs/753076513-150.jpg",
+			"images/imgs/753914906-150.jpg",
+			"images/imgs/750865188-150.jpg"
+		],
+		"refer": []
+	},
+	"ren.html": {
+		"resources": [
+			"images/lun1.jpg",
+			"images/imgs/753327906-150.jpg",
+			"images/imgs/753996736-150.jpg",
+			"css/hot.css",
+			"images/imgs/750867077-150.jpg",
+			"images/imgs/750864255-fm-b-150.jpg",
+			"images/imgs/753848520-150.jpg",
+			"images/lun3.jpg",
+			"json/good.json",
+			"images/lun2.jpg",
+			"images/lun5.jpg",
+			"images/imgs/750866827-150.jpg",
+			"images/imgs/754427087-fm-b-150.jpg",
+			"images/imgs/753547689-150.jpg",
+			"images/lun4.jpg",
+			"images/imgs/753425630-150.jpg",
+			"images/imgs/753076513-150.jpg",
+			"fonts/mui.ttf",
+			"images/imgs/751046039-150.jpg",
+			"js/zepto.js",
+			"images/imgs/753914906-150.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/touch.min.js"
+		],
+		"refer": [
+			"xiangqing.html"
+		]
+	}
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			html,body {
+				background-color: #efeff4;
+			}
+			ul,li{list-style: none;}
+			.title{
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+		 .aaa{
+    		font-size: 16px;
+    		color:#fff;
+    		position: absolute;
+    		top:55px;
+    		left: 150px;
+    	}
+    	#top .mui-pull-right{
+    		position: absolute;
+    		top: 53px;
+    		right: 20px;
+    		color: #fff;
+    	}
+    	.mui-table-view {
+    		margin-top: -6px;
+    	}
+    	.mui-table-view li{
+    		height: 58px;
+    		line-height: 40px;
+    	}
+    	.mui-table-view li span{
+    		margin-right: 10px;
+    		line-height: 40px;
+    		font-size: 18px;
+    	}
+    	#ads1{
+    		font-size: 14px;
+    	}
+		</style>
+	</head>
+
+	<body>
+
+			<div class="mui-content">
+			    <div class="mui-row">
+			        <div class="mui-col-sm-6 mui-col-xs-12" style="height:120px; background: url('images/83j58PICVkK.jpg') no-repeat center ;background-size: cover;">
+			           <div id="top" style="width: 90px ;height: 90px;border-radius: 50%;overflow: hidden;margin-top: 15px;margin-left: 30px;">
+			           		<img src="images/u=1588147162,276753163&fm=23&gp=0.jpg" alt=""  style="width: 100%;height: 100%;"/>
+			           		
+			           			<span class="aaa"  id="lol">请先登录</span>
+			           			<span class="mui-icon mui-icon-arrowright mui-pull-right "></span>
+			           	
+			           		
+			           </div>
+			        </div>
+			    </div>
+			    <ul class="mui-table-view" >
+				    <li class="mui-table-view-cell" id="dingwei1">
+				    	<span class="mui-icon mui-icon-location mui-pull-left" ></span>
+				    	收货地址:
+				    	<span id="ads1">点击获取地址</span>
+				    </li>
+				    <li class="mui-table-view-cell">
+				    	<span class="mui-icon iconfont  icon-wodedingdan mui-pull-left"></span>
+				    	我的订单
+				    </li>
+				    <li class="mui-table-view-cell" id="cart">
+				    	<span class="mui-icon iconfont  icon-gouwuche2 mui-pull-left"></span>
+				    	购物车
+				    </li>
+				    <li class="mui-table-view-cell">
+				    	<span class="mui-icon iconfont  icon-align-justify mui-pull-left"></span>
+				    	系统通知
+				    </li>
+				    <li class="mui-table-view-cell">
+				    	<span class="mui-icon iconfont  icon-membershipcard mui-pull-left"></span>
+				    	会员卡
+				    </li>
+				    <li class="mui-table-view-cell">
+				    	<span class="mui-icon iconfont  icon-youhuiquan mui-pull-left"></span>
+				    	优惠券
+				    </li>
+				    <li class="mui-table-view-cell">
+				    	<span class="mui-icon iconfont  icon-xiaoxixitongtongzhi mui-pull-left"></span>
+				    	积分
+				    </li>
+				    <li class="mui-table-view-cell">
+				    	<span class="mui-icon iconfont  icon-xiaoxixitongtongzhi mui-pull-left"></span>
+				    	联系我们
+				    </li>
+				</ul>
+			</div>
+			</div>
+
+			
+		
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/touch.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	<script>
+
+		mui.init(
+			{
+				
+				 gestureConfig:{
+				   tap: false //默认为true
+				   }
+			}
+		)
+		$("#lol").on("tap",function(){
+			console.log(2347298)
+			mui.openWindow({
+				id: 'login',
+				url: 'login.html'
+			});
+		})
+		
+		$("#cart").on("tap",function(){
+		
+			mui.openWindow({
+				id: 'cart',
+				url: 'cart.html'
+			});
+		})
+		$("#dingwei1").on("tap",function(){
+				plus.geolocation.getCurrentPosition( successCB, errorCB );
+
+				
+					
+		}	)
+			function successCB(a){
+						document.getElementById("ads1").innerHTML=a.addresses;
+						
+					}
+					function errorCB(){
+					alert('操作失败')
+				}
+		document.getElementById("lol").addEventListener("tap", function() {
+			alert(1)
+			mui.openWindow({
+				id: 'login',
+				url: 'login.html'
+			});
+		});
+			
+			
+		
+	</script>
+</html>
